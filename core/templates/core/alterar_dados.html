@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+  <div id="form">
+
+	<form method="post" action="alterar_dados" class="d-flex flex-column mt-4 align-items-center">
+		{% csrf_token %}
+		
+	  <div class="mb-3">
+		<label class="form-label">Nome</label>
+		<input type="text" class="form-control" id="nome" name="nome" value="{{ usr.first_name }}" autocomplete=off required>
+	  </div>
+	  
+	  <div class="mt-5">
+		<h5>Endereço:</h5>
+	  </div>
+	  
+	  <div class="mb-3">
+		<label class="form-label">Rua</label>
+		<input type="text" class="form-control" id="rua" name="rua" value="{{ usrInfo.rua }}" autocomplete=off required>
+	  </div>
+	  
+	  <div class="mb-3">
+		<label class="form-label">Número</label>
+		<input type="text" class="form-control" id="numero" name="numero" value="{{ usrInfo.numero }}" autocomplete=off required>
+	  </div>
+	  
+	  <div class="mb-3">
+		<label class="form-label">Bairro</label>
+		<input type="text" class="form-control" id="bairro" name="bairro" value="{{ usrInfo.bairro }}" autocomplete=off required>
+	  </div>
+	  
+	  <div class="mb-3">
+		<label class="form-label">CEP</label>
+		<input type="text" class="form-control" id="cep" name="cep" value="{{ usrInfo.cep }}" autocomplete=off required>
+	  </div>
+	  
+	  <div class="mb-3">
+		<label class="form-label">Complemento</label>
+		<input type="text" class="form-control" id="complemento" name="complemento" value="{{ usrInfo.complemento }}" autocomplete=off required>
+	  </div>
+
+	  <button type="submit" class="btn btn-primary mb-4">Enviar</button>
+	</form>
+
+  </div>
+
+{% endblock %}
