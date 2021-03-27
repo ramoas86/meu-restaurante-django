@@ -11,7 +11,6 @@ Nele é possível adicionar pratos de sua escolha ao carrinho de compras,
 realizar cadastro, login e atualizar os dados do usuário.
 
 ----------------------------------------------------------------------
-----------------------------------------------------------------------
 
 Link para acesso:
 https://meu-restaurante-rm86.herokuapp.com/
